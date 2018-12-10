@@ -1,0 +1,75 @@
+testing constructor and Push_Back
+v1: 9, 8, 7, 
+testing copy constructor v2(v1)
+adding a 6 onto v2
+v2: 9, 8, 7, 6, 
+v1: 9, 8, 7, 
+
+testing Push_Back with capacity change on v2
+size: 5 capacity: 8 v2: 9, 8, 7, 6, 11, 
+size: 6 capacity: 8 v2: 9, 8, 7, 6, 11, 12, 
+size: 7 capacity: 8 v2: 9, 8, 7, 6, 11, 12, 13, 
+size: 8 capacity: 8 v2: 9, 8, 7, 6, 11, 12, 13, 14, 
+size: 9 capacity: 16 v2: 9, 8, 7, 6, 11, 12, 13, 14, 15, 
+size: 10 capacity: 16 v2: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+
+testing v1[0] = v2[v2.Size()-1]
+v2: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+v1: 16, 8, 7, 
+testing copy constructor v4(v2)
+v4: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+v2: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+testing v3=v1
+v3: 16, 8, 7, 
+v4 = v4 causes no problems
+v4: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+popping v3 until empty
+ after Pop_Back,  v3: 16, 8, 
+ after Pop_Back,  v3: 16, 
+ after Pop_Back,  v3: 
+popping an empty vector then pushing 1
+v3: 1, 
+
+testing iterators on v2
+v2: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+begin iterator points to : 9
+end iterator points to : 0
+testing const iterators
+9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 	9	0
+
+testing Size and Clear
+size of v2 is 10
+Clear just sets the size to 0
+v2: 
+size of v2 is 0
+
+testing Erase
+v4: 9, 8, 7, 6, 11, 12, 13, 14, 15, 16, 
+erasing the 2nd item in v4
+v4: 9, 7, 6, 11, 12, 13, 14, 15, 16, 
+erasing the last item in v4
+v4: 9, 7, 6, 11, 12, 13, 14, 15, 
+
+testing At()
+testing v4.At(3) = 99; v4.At(0) = v4.At(5)
+v4: 13, 7, 6, 99, 12, 13, 14, 15, 
+
+trying v4.At(-1)
+vector index out of bounds
+trying v4.At(v4.Size())
+vector index out of bounds
+trying v4.At()
+vector index out of bounds
+
+testing Vector<double>
+d1 = 3.14, 1.62, 1.62, 
+
+Destructor called
+Destructor called
+when variables go out of scope, the Destructor is automatically called
+Destructor called
+Destructor called
+Destructor called
+Destructor called
+Destructor called
+Destructor called
